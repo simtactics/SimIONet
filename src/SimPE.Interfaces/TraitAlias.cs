@@ -36,9 +36,9 @@ namespace SimPe.Providers
         public override string ToString()
         {
 #if DEBUG
-            return Name + " (0x" + Helper.HexString(Id) + ")";
+            return $"{Name} (0x{Helper.HexString(Id)})";
 #else
-            return name;
+            return Name;
 #endif
         }
     }

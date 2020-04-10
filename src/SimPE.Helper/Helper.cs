@@ -87,7 +87,7 @@ namespace SimPe
 		/// <returns>The input String with added zeros.</returns>
 		public static string MinStrLength(string input, int length)
 		{
-			while (input.Length<length) input = "0"+input;
+			while (input.Length<length) input = $"0{input}";
 			return input;
 		}
         /// <summary>
@@ -113,7 +113,7 @@ namespace SimPe
 		public static string StrLength(string input, int length, bool left)
 		{
             if (left) return StrLength(input, length);
-			while (input.Length<length) input = "0"+input;
+			while (input.Length<length) input = $"0{input}";
 			if (input.Length>length) input = input.Substring(input.Length-length, length);
 			return input;
 		}
@@ -382,7 +382,7 @@ namespace SimPe
 		/// <returns></returns>
 		static string VersionToString(FileVersionInfo ver)
 		{
-			return ver.FileMajorPart+"."+ver.FileMinorPart+"."+ver.FileBuildPart+"."+ver.FilePrivatePart;
+			return $"{ver.FileMajorPart}.{ver.FileMinorPart}.{ver.FileBuildPart}.{ver.FilePrivatePart}";
 		}
 
 		/// <summary>
@@ -395,11 +395,11 @@ namespace SimPe
 			var res = "";
 			res = (l & 0xffff).ToString();
 			l = l>>16;
-			res = (l & 0xffff)+"."+res;
+			res = $"{(l & 0xffff)}.{res}";
 			l = l>>16;
-			res = (l & 0xffff)+"."+res;
+			res = $"{(l & 0xffff)}.{res}";
 			l = l>>16;
-			res = (l & 0xffff)+"."+res;		
+			res = $"{(l & 0xffff)}.{res}";		
 			return res;
 		}
 
@@ -415,7 +415,7 @@ namespace SimPe
 			l = l>>16;
 			res = (l & 0xffff).ToString();
 			l = l>>16;
-			res = (l & 0xffff)+"."+res;		
+			res = $"{(l & 0xffff)}.{res}";		
 			return res;
 		}
 
@@ -577,7 +577,7 @@ namespace SimPe
 			for (var i=0; i<data.Length; i++) 
 			{
 				var b = data[i];
-				s += HexString(b)+" ";
+				s += $"{HexString(b)} ";
 				if (i % 4 == 3) 
 				{
 					s += " ";

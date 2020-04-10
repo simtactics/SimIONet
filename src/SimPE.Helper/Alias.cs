@@ -178,8 +178,8 @@ namespace SimPe.Data
 				for (var i=0; i<Tag.Length; i++) 
 				{
 					var o = Tag[i];
-					if (o!=null) ret = ret.Replace("{"+i+"}", o.ToString());
-					else ret = ret.Replace("{"+i+"}", "");
+					if (o!=null) ret = ret.Replace($"{{{i}}}", o.ToString());
+					else ret = ret.Replace($"{{{i}}}", "");
 				}
 			}
 
