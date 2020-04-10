@@ -1,6 +1,6 @@
 # SimPE.Interfaces
 
-SimPE.Interfaces is a port of SimPE's Interface and Helper libraries to .NET Standard to allow for creation of new tools that depend only the absolute base functionality that SimPE provides.
+SimPE.Interfaces is a port of SimPE's Interface and Helper libraries to .NET Standard to allow for new or existing tools to make use of.
 
 ## API Compatibility
 
