@@ -20,13 +20,11 @@
 
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading;
-using System.Xml;
 using SimPe.Data;
 
 namespace SimPe
@@ -74,7 +72,7 @@ namespace SimPe
 		/// </summary>
 		/// <param name="data">The Byte Buffer</param>
 		/// <returns>The Binary Handler</returns>
-		public static BinaryReader GetBinaryReader(Byte[] data)
+		public static BinaryReader GetBinaryReader(byte[] data)
 		{
 			return new BinaryReader(new MemoryStream(data));
 		}
@@ -496,7 +494,7 @@ namespace SimPe
 		/// <remarks>created by Mark (daviesma@qca.org.uk)</remarks>
 		public static void CopyDirectory(string sourcePath, string destinationPath, bool recurse)
 		{
-			String[] files;
+			string[] files;
 			if (destinationPath[destinationPath.Length-1] != Path.DirectorySeparatorChar)
 				destinationPath+=Path.DirectorySeparatorChar;
 			if(!Directory.Exists(destinationPath)) Directory.CreateDirectory(destinationPath);

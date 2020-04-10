@@ -337,82 +337,82 @@ namespace SimPe.Data
         /// <summary>
         /// Group for Costum Content
         /// </summary>
-        public const UInt32 CustomGroup = 0x1C050000;
+        public const uint CustomGroup = 0x1C050000;
 
         /// <summary>
         /// Group for Global Content
         /// </summary>
-        public const UInt32 GlobalGroup = 0x1C0532FA;
+        public const uint GlobalGroup = 0x1C0532FA;
 
         /// <summary>
         /// Group for Local Content
         /// </summary>
-        public const UInt32 LocalGroup = 0xffffffff;
+        public const uint LocalGroup = 0xffffffff;
 
         /// <summary>
         /// A Directory file will have this Type in the fileindex.
         /// </summary>
-        public const UInt32 DirectoryFile = 0xE86B1EEF; //0xEF1E6BE8;
+        public const uint DirectoryFile = 0xE86B1EEF; //0xEF1E6BE8;
 
         /// <summary>
         /// Stores the relationship Value for a Sim
         /// </summary>
-        public const UInt32 RelationFile = 0xCC364C2A;
+        public const uint RelationFile = 0xCC364C2A;
 
         /// <summary>
         /// File Containing Strings
         /// </summary>
-        public const UInt32 StringFile = 0x53545223;
+        public const uint StringFile = 0x53545223;
 
         /// <summary>
         /// File Containing Pie Strings
         /// </summary>
-        public const UInt32 PieStringFile = 0x54544173;
+        public const uint PieStringFile = 0x54544173;
 
         /// <summary>
         /// File Containing Sim Descriptions
         /// </summary>
-        public const UInt32 SimDescriptionFile = 0xAACE2EFB;
+        public const uint SimDescriptionFile = 0xAACE2EFB;
 
         /// <summary>
         /// Files Containing Sim Images
         /// </summary>
-        public const UInt32 SimImageFile = 0x856DDBAC;
+        public const uint SimImageFile = 0x856DDBAC;
 
         /// <summary>
         /// The File containing all Family Ties
         /// </summary>
-        public const UInt32 FamilyTiesFile = 0x8C870743;
+        public const uint FamilyTiesFile = 0x8C870743;
 
         /// <summary>
         /// File containing BHAV Informations
         /// </summary>
-        public const UInt32 BhavFile = 0x42484156;
+        public const uint BhavFile = 0x42484156;
 
         /// <summary>
         /// File containng Global Data
         /// </summary>
-        public const UInt32 GlobFile = 0x474C4F42;
+        public const uint GlobFile = 0x474C4F42;
 
         /// <summary>
         /// File Containing Object Data
         /// </summary>
-        public const UInt32 ObjdFile = 0x4F424A44;
+        public const uint ObjdFile = 0x4F424A44;
 
         /// <summary>
         /// File Containing Catalog Strings
         /// </summary>
-        public const UInt32 CtssFile = 0x43545353;
+        public const uint CtssFile = 0x43545353;
 
         /// <summary>
         /// File Containing Name Maps
         /// </summary>
-        public const UInt32 NameMap = 0x4E6D6150;
+        public const uint NameMap = 0x4E6D6150;
 
         /// <summary>
         /// Neighborhood/Memory File Typesss
         /// </summary>
-        public const UInt32 Memories = 0x4E474248;
+        public const uint Memories = 0x4E474248;
 
 
         /// <summary>
@@ -731,9 +731,9 @@ namespace SimPe.Data
         /// <summary>
         /// all Known SemiGlobal Groups
         /// </summary>
-     
         static SemiGlobalListing _sgl;
-        public static List<SemiGlobalAlias> SemiGlobals{
+
+        static IEnumerable<SemiGlobalAlias> SemiGlobals{
              get {
                  if (_sgl == null) LoadSemGlobList();
                  return _sgl;

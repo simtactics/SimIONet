@@ -48,7 +48,7 @@ namespace SimPe.Interfaces.Files
 		/// Returns the Major Version of The Packages FileFormat
 		/// </summary>
 		/// <remarks>This value should be 1</remarks>
-		Int32 MajorVersion
+		int MajorVersion
 		{
 			get;
 		}
@@ -59,7 +59,7 @@ namespace SimPe.Interfaces.Files
 		/// Returns the Minor Version of The Packages FileFormat 
 		/// </summary>
 		/// <remarks>This value should be 0 or 1</remarks>
-		Int32 MinorVersion
+		int MinorVersion
 		{
 			get;
 		}
